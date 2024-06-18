@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PONG</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="start_screen">
+        <div class="choose_player">
+            <h2>Playerauswahl</h2>
+
+            <div class="input-group mb-3">
+                <button class="btn btn-outline-secondary mb20" type="button" id="button-addon1">Player 1</button>
+                <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon"
+                    aria-describedby="button-addon1">
+            </div>
+            <div class="input-group mb-3">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon1">Player 2</button>
+                <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon"
+                    aria-describedby="button-addon1">
+            </div>
+
+
+        </div>
+    </div>
+    <h1>PONG</h1>
+    <div class="points">
+        <span id="pointP1" class="point">0</span>
+        <span id="pointP2" class="point">0</span>
+    </div>
+    <div class="canvas">
+        <canvas id="ca" width=720 height=480 style="background-color: black;"></canvas>
+    </div>
+    <div class="dialog" id="dialog">
+        <span id="whoWin"></span>
+        <button class="restart" onclick="location.reload()">Neues Spiel</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
