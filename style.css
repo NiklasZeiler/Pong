@@ -82,15 +82,28 @@ h1 {
     height: 150px;
 }
 
+.startGame {
+    margin-top: 20px;
+    width: 120px;
+
+}
+
 #whoWin {
     font-size: 25px;
     font-weight: 600;
 }
 
 .restart {
+    z-index: 999;
     cursor: pointer;
 }
 
 .mb20 {
     margin-bottom: 20px;
+}
+
+.players {
+    display: flex;
+    justify-content: space-around;
+    height: 32px;
 }

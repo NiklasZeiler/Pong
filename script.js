@@ -16,6 +16,8 @@ let ball = {
     speedY: 0,
 };
 let intervalId;
+let playerOneName = "";
+let playerTwoName = "";
 
 
 document.addEventListener("keydown", e => key[e.keyCode] = true)
@@ -112,12 +114,12 @@ function playerOutOfCanvas() {
 
 function gameOver() {
     if (pointP1.textContent == 5) {
-        document.getElementById("whoWin").innerHTML = "Player 1 hat gewonnen"
+        document.getElementById("whoWin").innerHTML = `${playerOneName} hat gewonnen`
         openDialog()
         clearInterval(intervalId);
     }
     if (pointP2.textContent == 5) {
-        document.getElementById("whoWin").innerHTML = "Player 2 hat gewonnen"
+        document.getElementById("whoWin").innerHTML = `${playerTwoName} hat gewonnen`
         openDialog()
         clearInterval(intervalId);
     }
@@ -126,5 +128,28 @@ function gameOver() {
 function openDialog() {
     document.getElementById("dialog").style.display = "flex"
 }
+
+function closePlayerChoose() {
+    document.getElementById("player_choose").style.display = "none"
+    document.getElementById("start").style.backgroundColor = "transparent"
+}
+
+function addPlayerOne() {
+    playerOneName = document.getElementById("playerOneName").value
+    let playerOne = document.getElementById("playerOne")
+    playerOne.innerHTML = playerOneName
+
+}
+
+function addPlayerTwo() {
+    playerTwoName = document.getElementById("playerTwoName").value
+    let playerTwo = document.getElementById("playerTwo")
+    playerTwo.innerHTML = playerTwoName
+}
+
+function reload() {
+    location.reload()
+}
+
 
 
